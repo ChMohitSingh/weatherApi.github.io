@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather ForeCast</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+        @media screen and (max-Width: 1500px) {    /* Extra Large screen*/
+        body {
+            background-color: rgb(148, 111, 141);
+        } 
+    }
+@media screen  and ( max-Width: 1199px){  /*  large screen*/
+        body{
+            background-color: rgb(63, 125, 123);
+        } 
+#weatherContainer{
+    width:90%;
+    height: 100%;
+    margin-top: 90px;
+} 
+#iconsContainer{
+    width: 90%;
+    height: 93%;
+}
+.icons{
+    width: 35%;
+    height: 26%;
+    margin-left: 50px;
+}
+.image{
+    height: 60%;
+    width: 60%;
+} 
+    }
+    @media screen and (max-Width: 768px) {    /* Tablet screen*/
+        body {
+            background-color: rgb(161, 13, 225);
+        }
+#weatherContainer{
+    width:95%;
+    height: 100%;
+    margin-top: 110px;
+} 
+#iconsContainer{
+    width: 85%;
+    height: 95%;
+}
+.icons{
+    width: 25%;
+    height: 25%;
+}
+.image{
+    height: auto;
+    width: auto;
+}
+
+    }
+     /* @media screen and (max-Width: 1024px) {    Desktop screen
+        body {
+            background-color: rgb(7, 200, 243);
+        } 
+    }  */
+    @media screen and (max-Width: 480px) {    /* Mobile screen*/
+        body {
+            background-color: rgb(234, 177, 139);    
+        }  
+#weatherContainer{
+    width:95%;
+    height: 100%;
+    margin-top: 120px;
+} 
+#iconsContainer{
+    width: 85%;
+    height: 95%;
+    /* margin-top: 110px; */
+}
+.icons{
+    width: 25%;
+    height: 25%;
+}
+.image{
+    height: auto;
+    width: auto;
+} 
+    }
+</style>
+<body onload="DefaultScreen()">
+    <center>
+        <h1 id="Para1"> 5-DAY WEATHER FORECAST</h1> 
+        <p id="inputContainer">City: <input type="Text" id="cityInput"> </p> 
+        <button type="button" onclick="GetInfo()">Click Me</button>
+        <h2 id="cityName">--Iglas--</h2>    
+    </center>
+    <div id="weatherContainer">
+        <div id="iconsContainer">
+            <div class="icons">
+                <p class="weather" id="day1"></p>
+                <div class="image"><img src="./dots.png" class="imgClass" id="img1" alt=""></div>
+                <p class="minValues" id="day1Min">Loading.....</p>
+                <p class="maxValues" id="day1Max">Loading.....</p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day2"></p>
+                <div class="image"><img src="./dots.png" class="imgClass" id="img2" alt=""></div>
+                <p class="minValues" id="day2Min">Loading.....</p>
+                <p class="maxValues" id="day2Max">Loading.....</p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day3"></p>
+                <div class="image"><img src="./dots.png" class="imgClass" id="img3" alt=""></div>
+                <p class="minValues" id="day3Min">Loading.....</p>
+                <p class="maxValues" id="day3Max">Loading.....</p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day4"></p>
+                <div class="image"><img src="./dots.png" class="imgClass" id="img4" alt=""></div>
+                <p class="minValues" id="day4Min">Loading.....</p>
+                <p class="maxValues" id="day4Max">Loading.....</p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day5"></p>
+                <div class="image"><img src="./dots.png" class="imgClass" id="img5" alt=""></div>
+                <p class="minValues" id="day5Min">Loading.....</p>
+                <p class="maxValues" id="day5Max">Loading.....</p>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
